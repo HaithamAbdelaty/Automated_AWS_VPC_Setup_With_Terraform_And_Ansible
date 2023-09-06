@@ -21,10 +21,6 @@ variable "subnet_tags" {
 }
 
 
-
-
-
-
 # variable "subnets-name"{
 #     type= list 
 # }
