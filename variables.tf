@@ -19,7 +19,9 @@ variable "subnet_cidr_blocks" {
 variable "subnet_tags" {
   type = list(string)
 }
-
+variable "ec2-securitygroups"{ 
+  type=list(string)
+}
 # variable "EC2-names" {
 #   type = list(string)
 # }
