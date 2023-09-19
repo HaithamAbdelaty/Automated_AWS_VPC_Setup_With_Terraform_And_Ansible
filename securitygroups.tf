@@ -10,7 +10,6 @@ resource "aws_security_group" "private-security-group" {
     protocol    = "tcp"
     cidr_blocks = [aws_subnet.subnet[1].cidr_block]
   }
-
   egress {
     from_port   = 0
     to_port     = 0
