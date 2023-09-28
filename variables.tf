@@ -19,8 +19,8 @@ variable "subnet_cidr_blocks" {
 variable "subnet_tags" {
   type = list(string)
 }
-variable "ec2-securitygroups"{ 
-  type=list(string)
+variable "ec2-securitygroups" {
+  type = list(string)
 }
 
 variable "EC2-names" {
@@ -28,21 +28,10 @@ variable "EC2-names" {
 }
 
 variable "ami" {
-  type    = string
+  type = string
 }
-
-variable "instance_type_list" {
-  type    = string
+variable "instance_type" {
+  type = string
 }
-
-# variable "subnet_id_list" {
-#   type    = list(object)
-# }
-
-# variable "key_name_list" {
-#   type    = string
-#   default = ["my-keypair", "my-keypair"]
-# }
-
 
 

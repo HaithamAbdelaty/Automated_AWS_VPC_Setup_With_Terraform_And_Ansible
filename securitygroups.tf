@@ -5,7 +5,7 @@ resource "aws_security_group" "private-security-group" {
 
   # Inbound rules (allow incoming traffic)
   ingress {
-    from_port   = 22  # SSH port
+    from_port   = 22 # SSH port
     to_port     = 22
     protocol    = "tcp"
     cidr_blocks = [aws_subnet.subnet[1].cidr_block]
@@ -13,7 +13,7 @@ resource "aws_security_group" "private-security-group" {
   egress {
     from_port   = 0
     to_port     = 0
-    protocol    = "-1"  # All traffic
+    protocol    = "-1" # All traffic
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
@@ -26,18 +26,18 @@ resource "aws_security_group" "public-security-group" {
 
   # Inbound rules (allow incoming traffic)
   ingress {
-    from_port   = 22  # SSH port
+    from_port   = 22 # SSH port
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]  # Open SSH access to the world (be cautious with this)
+    cidr_blocks = ["0.0.0.0/0"] # Open SSH access to the world (be cautious with this)
   }
-   
-ingress {
-    from_port   = 443  # HTTPS port
+
+  ingress {
+    from_port   = 443 # HTTPS port
     to_port     = 443
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]  # Allowing HTTPS traffic from anywhere
-}
+    cidr_blocks = ["0.0.0.0/0"] # Allowing HTTPS traffic from anywhere
+  }
 
 
   ingress {
@@ -49,7 +49,7 @@ ingress {
   egress {
     from_port   = 0
     to_port     = 0
-    protocol    = "-1"  # All traffic
+    protocol    = "-1" # All traffic
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
